@@ -3,6 +3,7 @@ import validation from "./validation";
 import { Link } from "react-router-dom";
 import routesMap from "../../../../../routeControl/userRoutMap";
 function SignUpForm({onSubmit}) {
+
   const initialValues = {
     firstname: "",
     lastname: "",
@@ -75,7 +76,7 @@ function SignUpForm({onSubmit}) {
                   Login
                 </button>
                 <div className="text-center fs-6">
-                  <Link href="#">Forget password?</Link> or <Link to={routesMap.SIGNUP.path}>Sign up</Link>
+                  <Link href="#">Forget password?</Link> or <Link to={routesMap.LOGIN.path}>Login</Link>
                 </div>
               </div>
             </Form>

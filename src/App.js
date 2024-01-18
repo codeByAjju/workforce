@@ -1,11 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, useRoutes } from 'react-router-dom';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, useRoutes } from "react-router-dom";
+import "./App.css";
 import { routes } from "./route/index";
+import Sidebar from "./components/Dashboard/Sidebar";
 
 function RouteLayout({ path }) {
   const element = useRoutes(path);
-  console.log("on the app.js");
   return element;
 }
 
@@ -13,7 +13,9 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <RouteLayout path={routes()} />
+        <Sidebar>
+          <RouteLayout path={routes()} />
+        </Sidebar>
       </div>
     </Router>
   );

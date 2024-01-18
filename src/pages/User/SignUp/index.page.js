@@ -1,17 +1,18 @@
 import SignUpForm from "../../../components/Form/User/Auth/SignUp/index.form";
 import { UserAuthServices } from "../../../Services/User/Auth/index.service";
-import Navbar from "../../../components/pageLoder/navbar";
+import { useNavigate } from "react-router-dom";
 function UserSignUp() {
+    const navigate = useNavigate();
     async function onSubmit(values){
-        console.log(values);
         const res  = await UserAuthServices.userSignUp(values);
-        if(res)
+        if(res){
             window.alert("SignUp successfull")
+            navigate('/dashboard');
+        }
         else    
             window.alert("error");
     }
     return <>
-        <Navbar/>
         <SignUpForm onSubmit={onSubmit}/>
     </>
 }

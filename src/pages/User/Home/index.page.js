@@ -1,7 +1,9 @@
-import Navbar from "../../../components/pageLoder/navbar";
-function Home(){
-    return <>
-        <Navbar />  
+import UserDashboard from "../../../components/Dashboard/Home/index";
+function Home() {
+  return (
+    <>
+      <UserDashboard />
     </>
+  );
 }
 export default Home;

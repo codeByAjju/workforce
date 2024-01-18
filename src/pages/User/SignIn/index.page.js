@@ -1,17 +1,20 @@
 import LoginForm from "../../../components/Form/User/Auth/Login/index.form";
 import { UserAuthServices } from "../../../Services/User/Auth/index.service";
-import Navbar from "../../../components/pageLoder/navbar";
+import { useNavigate } from "react-router-dom";
 function UserLogIn() {
-    async function onSubmit(values){
+    const navigate = useNavigate();
+
+    async function OnSubmit(values){
         const res  = await UserAuthServices.userLogIn(values);
-        if(res)
+        if(res){
             window.alert("SignIn successfull")
+            navigate('/dashboard');
+        }
         else    
             window.alert("Unauthorized User");
     }
     return <>
-        <Navbar/>
-        <LoginForm onSubmit={onSubmit}/>
+        <LoginForm onSubmit={OnSubmit}/>
     </>
 }
 export default UserLogIn;

@@ -4,6 +4,9 @@ const accessRoute = {
   HOME: {
     path: `${baseRoutes.userBaseRoutes}`,
   },
+  DASHBOARD: {
+    path: `${baseRoutes.userBaseRoutes}dashboard`,
+  },
   SIGNUP: {
     path: `${baseRoutes.userBaseRoutes}signup`
   },
