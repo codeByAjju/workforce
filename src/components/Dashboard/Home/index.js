@@ -47,7 +47,7 @@ function UserDashboard() {
         <div className="col-lg-12 bg-light d-flex">
           <div className="card card-body text-white bg-white mb-3 col-lg-3">
             <div className="col-lg-1">
-              <div className="d-flex justify-content-end">
+              <div className="d-flex justify-content-end">   
                 <span className="">
                   <i
                     className="fa fa-pencil text-danger border border-primary"
