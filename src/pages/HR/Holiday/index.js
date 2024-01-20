@@ -1,4 +1,4 @@
-import Holiday from "../../../components/HR/Holiday/index";
+import { Holiday } from "../../../components";
 function UserHoliday() {
   return (
     <>

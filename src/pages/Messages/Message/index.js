@@ -1,4 +1,4 @@
-import Message from "../../../components/Messages/Message/index";
+import { Message } from "../../../components";
 function UserMessage() {
   return (
     <>

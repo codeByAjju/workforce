@@ -1,4 +1,4 @@
-import Leaves from "../../../components/HR/Leaves/index";
+import { Leaves } from "../../../components";
 function UserLeaves() {
   return (
     <>
