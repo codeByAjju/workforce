@@ -1,4 +1,4 @@
-import Attendance from "../../../components/HR/Attendance/index";
+import { Attendance } from "../../../components";
 function UserAttendance() {
   return (
     <>

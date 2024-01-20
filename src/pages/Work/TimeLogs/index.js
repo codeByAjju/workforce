@@ -1,4 +1,4 @@
-import TimeLogs from "../../../components/Work/TimeLogs/index";
+import { TimeLogs } from "../../../components";
 function UserTimeLogs() {
   return (
     <>

@@ -1,4 +1,4 @@
-import UserDashboard from "../../../components/Dashboard/Home/index";
+import { UserDashboard } from "../../../components";
 function Home() {
   return (
     <>

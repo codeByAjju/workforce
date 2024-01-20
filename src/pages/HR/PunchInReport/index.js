@@ -1,4 +1,4 @@
-import PunchInReport from "../../../components/HR/PunchInReport/index";
+import {PunchInReport} from "../../../components";
 function UserPunchInReport() {
   return (
     <>
