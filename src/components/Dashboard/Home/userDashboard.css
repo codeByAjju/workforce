@@ -8,3 +8,24 @@
 .box-shadow {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+.right {
+  float: right;
+}
+
+.font-size {
+  font-weight: bold;
+}
+.fa-edit {
+  font-size: 28px;
+  color: red;
+  cursor: pointer;
+}
+
+.fa-briefcase {
+  font-size: x-large;
+}
+
+.fa-copy {
+  font-size: 28px;
+  color: blue;
+}
