@@ -1,6 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
-
+import "./userDashboard.css";
 function UserDashboard() {
   return (
     <>
@@ -50,12 +49,52 @@ function UserDashboard() {
       </div>
       <div className="row">
         <div className="col-lg-12 d-flex mt-3">
+          <div className="col-lg-3 d-flex box-shadow p-3">
+            <div className="col-10">
+              <i className="fa fa-user-circle" style={{ fontSize: "60px" }}></i>
+              <div className="mt-3">
+                <span className="font-size">Ajay Patel</span>{" "}
+                <span>CST0611</span>
+              </div>
+              <div className="">Associate Software Engineer</div>
+            </div>
+
+            <div className="col-2">
+              <i className="fa fa-edit right"></i>
+            </div>
+          </div>
+          {/* <div className="col-lg-1 bg-danger">123</div> */}
+          <div className="col-lg-1">
+            <div className="row h-50">
+              <div className="text-center">
+                <div style={{ textAlign: "justify" }}>
+                  <span>Present</span>
+                  <br />
+                  <span className="mt-3">19</span>
+                </div>
+              </div>
+              <div className="col-lg-6 text-center">
+                <i className="fa fa-briefcase" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div className="row h-50">
+              <div className="text-center">
+                <div style={{ textAlign: "justify" }}>
+                  <span>Logs</span>
+                  <br />
+                  <span className="mt-3">146:15</span>
+                </div>
+              </div>
+              <div className="col-lg-6 text-center">
+                <i class="fa fa-copy"></i>
+              </div>
+            </div>
+          </div>
+
           <div className="col-lg-2">123</div>
           <div className="col-lg-2">123</div>
           <div className="col-lg-2">123</div>
-          <div className="col-lg-2">123</div>
-          <div className="col-lg-2">123</div>
-          <div className="col-lg-2">123</div>
+          <div className="col-lg-1">123</div>
         </div>
       </div>
     </>
