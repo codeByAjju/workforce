@@ -63,10 +63,9 @@ function UserDashboard() {
               <i className="fa fa-edit right"></i>
             </div>
           </div>
-          {/* <div className="col-lg-1 bg-danger">123</div> */}
-          <div className="col-lg-1">
+          <div className="col box-shadow">
             <div className="row h-50">
-              <div className="text-center">
+              <div className="text-center col-lg-6">
                 <div style={{ textAlign: "justify" }}>
                   <span>Present</span>
                   <br />
@@ -78,7 +77,7 @@ function UserDashboard() {
               </div>
             </div>
             <div className="row h-50">
-              <div className="text-center">
+              <div className="text-center col-lg-6">
                 <div style={{ textAlign: "justify" }}>
                   <span>Logs</span>
                   <br />
@@ -90,11 +89,118 @@ function UserDashboard() {
               </div>
             </div>
           </div>
+          <div className="col">
+            <div className="row h-50">
+              <div className="text-center col-lg-6">
+                <div style={{ textAlign: "justify" }}>
+                  <span>Absent</span>
+                  <br />
+                  <span className="mt-3">1</span>
+                </div>
+              </div>
+              <div className="col-lg-6 text-center">
+                <i className="fa fa-briefcase" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div className="row h-50 ">
+              <div className="text-center col-lg-6">
+                <div style={{ textAlign: "justify" }}>
+                  <span>Projects</span>
+                  <br />
+                  <span className="mt-3">1</span>
+                </div>
+              </div>
+              <div className="col-lg-6 text-center">
+                <i className="fa fa-copy"></i>
+              </div>
+            </div>
+          </div>
+          <div className="col box-shadow">
+            <div className="row h-50">
+              <div className="text-center col-lg-6">
+                <div style={{ textAlign: "justify" }}>
+                  <span>Leaves</span>
+                  <br />
+                  <span className="mt-3">0</span>
+                </div>
+              </div>
+              <div className="col-lg-6 text-center">
+                <i className="fa fa-briefcase" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div className="row h-50 ">
+              <div className="text-center col-lg-6">
+                <div style={{ textAlign: "justify" }}>
+                  <span>Tasks</span>
+                  <br />
+                  <span className="mt-3">0</span>
+                </div>
+              </div>
+              <div className="col-lg-6 text-center">
+                <i class="fa fa-copy"></i>
+              </div>
+            </div>
+          </div>
+          <div className="col ">
+            <div className="row h-50">
+              <div className="text-center col-lg-6">
+                <div style={{ textAlign: "justify" }}>
+                  <span>Late(s)</span>
+                  <br />
+                  <span className="mt-3">0</span>
+                </div>
+              </div>
+              <div className="col-lg-6 text-center">
+                <i class="fa fa-clock-o clock-warning" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div className="row h-50 ">
+              <div className="text-center col-lg-6">
+                <div style={{ textAlign: "justify" }}>
+                  <span>Overdue</span>
+                  <br />
+                  <span className="mt-3">0</span>
+                </div>
+              </div>
+              <div className="col-lg-6 text-center">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 d-flex box-shadow p-3">
+            <div className="col-8">
+              {/* <i className="fa fa-user-circle" style={{ fontSize: "25px" }}></i> */}
+              <span className="font-size">
+                HAPPY 3<sup>rd</sup> WORK
+              </span>
+              <div className="mt-3">
+                <h4
+                  className=""
+                  style={{ color: "#e4a11b", fontFamily: "cursive" }}
+                >
+                  anniversary
+                </h4>
+              </div>
+              <div className="">
+                <i
+                  className="fa fa-user-circle"
+                  style={{ fontSize: "20px" }}
+                ></i>
+                <span className="mx-1">Associate Software Engineer</span>
+              </div>
+            </div>
 
-          <div className="col-lg-2">123</div>
-          <div className="col-lg-2">123</div>
-          <div className="col-lg-2">123</div>
-          <div className="col-lg-1">123</div>
+            <div className="col-2">
+              <div className="col-4">
+                <img
+                  src="./balloons.png"
+                  // src="https://as2.ftcdn.net/v2/jpg/06/77/06/63/1000_F_677066322_V3a0KoN3cNnUzaLPpvXV7MVsmnHwbG4e.webp"
+                  alt="BigCo Inc. logo"
+                  style={{ height: "150px", width: "90px" }}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
