@@ -9,7 +9,7 @@ export const APIrequest = async ({
         console.log(bodyData);
         const axiosConfig = {
             method: method || "GET",
-            baseURL: "http://localhost:3030/api",
+            baseURL: "http://localhost:3030/",
             headers: {
                 "content-type": "application/json",
             },
