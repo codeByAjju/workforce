@@ -1,54 +1,103 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import validation from "./validation";
-import routesMap from '../../../../../routeControl/userRoutMap';
+import routesMap from "../../../../../routeControl/userRoutMap";
 import { Link } from "react-router-dom";
-import {useHistory} from 'react-router-dom';
-function LoginForm({onSubmit}) {
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
+import "./Login.css"
+function LoginForm({ onSubmit }) {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   const initialValues = {
     email: "",
-    password: ""
+    password: "",
   };
   return (
     <>
       <Formik
-      initialValues={{...initialValues}}
-      validationSchema={validation()}
-      onSubmit={onSubmit}>
+        initialValues={{ ...initialValues }}
+        validationSchema={validation()}
+        onSubmit={onSubmit}
+      >
         {(props) => {
           return (
             <Form>
-              <div className="wrapper mt-5">
-                <div className="logo">
-                  <img
-                    src="https://cdn.imgbin.com/16/3/18/imgbin-online-shopping-shopping-cart-logo-e-commerce-market-ZB0j7BGkzwjLHhMxSKi37nGKD.jpg"
-                    alt="img"
-                  />
-                </div><div className="" style={{color:'red',fontSize:17}}><ErrorMessage name="email" component="div" /></div>
-                <div className="form-field d-flex align-items-center">
-                  <span className="far fa-user" />
-                  <Field
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Email"
-                  />
-                </div><div className="" style={{color:'red',fontSize:17}}><ErrorMessage name="password" component="div" /></div>
-                <div className="form-field d-flex align-items-center">
-                  <span className="fas fa-key" />
-                  <Field
-                    type="password"
-                    name="password"
-                    id="password"
-                    placeholder="Password"
-                  />
+              <section style={{ backgroundColor: "#e9ebef" }}>
+                <div class="container py-3 h-100">
+                  <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                      <div
+                        class="card shadow-2-strong"
+                        style={{ borderRadius: "1rem" }}
+                      >
+                        <div class="card-body p-5 text-center">
+                          <h3 class="mb-5">Log In</h3>
+
+                          <div class="form-outline mb-4">
+                            <Field
+                              type="email"
+                              name="email"
+                              id="email"
+                              placeholder="Email"
+                              class="form-control form-control-lg"
+                            />
+                          </div>
+
+                          <div className="form-outline mb-4 text-start">
+                            <div className="input-group">
+                              <Field
+                                type={showPassword ? "text" : "password"}
+                                name="password"
+                                id="password"
+                                placeholder="Password"
+                                className="form-control form-control-lg"
+                              />
+                              <button
+                                className="btn btn-outline-secondary"
+                                type="button"
+                                onClick={togglePasswordVisibility}
+                              >
+                                <i
+                                  className={`fa ${
+                                    showPassword ? "fa-eye-slash" : "fa-eye"
+                                  }`}
+                                ></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="form-check d-flex justify-content-start mb-4">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="form1Example3"
+                              style={{ cursor: "pointer" }}
+                            />
+                            <label class="form-check-label" for="form1Example3">
+                              Stay logged in
+                            </label>
+                          </div>
+
+                          <button
+                            class="btn btn-primary btn-lg btn-block"
+                            type="submit"
+                          >
+                            <span>Login</span>
+                            <span>
+                              <i className="mx-3 fa fa-long-arrow-right"></i>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <button className="btn mt-3" htmlType="submit" type="submit"> 
-                  Login
-                </button>
-                <div className="text-center fs-6">
-                  <Link href="#">Forget password?</Link> or <Link to={routesMap.SIGNUP.path}>Sign up</Link>
-                </div>
-              </div>
+              </section>
             </Form>
           );
         }}
