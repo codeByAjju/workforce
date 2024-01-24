@@ -1,0 +1,12 @@
+.forgotButton :hover {
+  font-weight: 600;
+  color: seagreen;
+}
+.forgotButton span {
+  font-weight: 500;
+  color: black;
+}
+.btn-outline-secondary {
+    border-color: #c6c6c6;
+    margin-left: -3px;
+}
