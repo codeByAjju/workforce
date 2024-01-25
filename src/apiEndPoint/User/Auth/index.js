@@ -5,7 +5,7 @@ const UserAuth = {
     },
     userLogIn:{
         method:"POST",
-        url:"/signin"
+        url:"/signIn"
     }
 }
 export default UserAuth;

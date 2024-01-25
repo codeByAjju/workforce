@@ -4,10 +4,10 @@ import routesMap from "../../../../../routeControl/userRoutMap";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
-import "./Login.css"
+import "./Login.css";
 function LoginForm({ onSubmit }) {
   const [showPassword, setShowPassword] = useState(false);
-
+  const [isAlertVisible, setIsAlertVisible] = useState(false);
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -15,6 +15,10 @@ function LoginForm({ onSubmit }) {
   const initialValues = {
     email: "",
     password: "",
+  };
+
+  const showSweetAlert = () => {
+    setIsAlertVisible(true);
   };
   return (
     <>
