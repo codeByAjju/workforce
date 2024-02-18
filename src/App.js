@@ -1,15 +1,12 @@
-import { React, Suspense } from "react";
+import { React } from "react";
 import {
   BrowserRouter as Router,
   useRoutes,
-  useLocation,
 } from "react-router-dom";
 import "./App.css";
 import { routes } from "./route/index";
 import Sidebar from "./components/Dashboard/Sidebar";
 import { Unknown } from "./components";
-import { baseRoutes } from "./helpers/baseRoutes";
-import FullPageLoader from "./components/FullPageLoader/User";
 
 function RouteLayout({ path }) {
   const element = useRoutes(path);
