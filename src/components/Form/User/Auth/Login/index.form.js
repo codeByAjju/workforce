@@ -31,23 +31,23 @@ function LoginForm({ onSubmit }) {
           return (
             <Form>
               <section style={{ backgroundColor: "#e9ebef" }}>
-                <div class="container py-3 h-100">
-                  <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div className="container py-3 h-100">
+                  <div className="row d-flex justify-content-center align-items-center h-100">
+                    <div className="col-12 col-md-8 col-lg-6 col-xl-5">
                       <div
-                        class="card shadow-2-strong"
+                        className="card shadow-2-strong"
                         style={{ borderRadius: "1rem" }}
                       >
-                        <div class="card-body p-5 text-center">
-                          <h3 class="mb-5">Log In</h3>
+                        <div className="card-body p-5 text-center">
+                          <h3 className="mb-5">Log In</h3>
 
-                          <div class="form-outline mb-4">
+                          <div className="form-outline mb-4">
                             <Field
                               type="email"
                               name="email"
                               id="email"
                               placeholder="Email"
-                              class="form-control form-control-lg"
+                              className="form-control form-control-lg"
                             />
                           </div>
 
@@ -74,21 +74,21 @@ function LoginForm({ onSubmit }) {
                             </div>
                           </div>
 
-                          <div class="form-check d-flex justify-content-start mb-4">
+                          <div className="form-check d-flex justify-content-start mb-4">
                             <input
-                              class="form-check-input"
+                              className="form-check-input"
                               type="checkbox"
                               value=""
                               id="form1Example3"
                               style={{ cursor: "pointer" }}
                             />
-                            <label class="form-check-label" for="form1Example3">
+                            <label className="form-check-label" for="form1Example3">
                               Stay logged in
                             </label>
                           </div>
 
                           <button
-                            class="btn btn-primary btn-lg btn-block"
+                            className="btn btn-primary btn-lg btn-block"
                             type="submit"
                           >
                             <span>Login</span>

@@ -85,7 +85,7 @@ function UserDashboard() {
                 </div>
               </div>
               <div className="col-lg-6 text-center">
-                <i class="fa fa-copy"></i>
+                <i className="fa fa-copy"></i>
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ function UserDashboard() {
                 </div>
               </div>
               <div className="col-lg-6 text-center">
-                <i class="fa fa-copy"></i>
+                <i className="fa fa-copy"></i>
               </div>
             </div>
           </div>
@@ -151,7 +151,7 @@ function UserDashboard() {
                 </div>
               </div>
               <div className="col-lg-6 text-center">
-                <i class="fa fa-clock-o clock-warning" aria-hidden="true"></i>
+                <i className="fa fa-clock-o clock-warning" aria-hidden="true"></i>
               </div>
             </div>
             <div className="row h-50 ">
@@ -163,7 +163,7 @@ function UserDashboard() {
                 </div>
               </div>
               <div className="col-lg-6 text-center">
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <i className="fa fa-clock-o" aria-hidden="true"></i>
               </div>
             </div>
           </div>
