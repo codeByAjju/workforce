@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { React, Suspense } from "react";
+import {
+  BrowserRouter as Router,
+  useRoutes,
+  useLocation,
+  Routes,
+} from "react-router-dom";
+import "./App.css";
+import { routes } from "./route/index";
+import Sidebar from "./components/Dashboard/Sidebar";
+import { Unknown } from "./components";
+import { baseRoutes } from "./helpers/baseRoutes";
+import FullPageLoader from "./components/FullPageLoader/User";
+
+function RouteLayout({ path }) {
+  const element = useRoutes(path);
+  if (!element) {
+    return <Unknown />;
+  }
+  return element;
+}
 
 function App() {
+  const location = useLocation();
+
+  let path =
+    location.pathname.search(baseRoutes.userBaseRoutes.replace("/", "")) >= 0
+      ? "admin"
+      : "user";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <Router>
+    //   <div className="App">
+    //     <Sidebar>
+    //       <RouteLayout path={routes()} />
+    //     </Sidebar>
+    //   </div>
+    // </Router>
+        <Suspense fallback={(path = "user" && <FullPageLoader />)}>
+          <RouteLayout path={routes()} />
+        </Suspense>
   );
 }
 
