@@ -1,7 +1,7 @@
 import { AdminMainLayout, MainLayout } from "../layouts";
 import { userRoutes } from "./User";
 import { adminRoutes } from "./Admin";
-export const routes = () => {
+export const Routes = () => {
   return [
     {
       element: <MainLayout />,
@@ -10,7 +10,7 @@ export const routes = () => {
     {
       element: <AdminMainLayout />,
       children: [...adminRoutes()]
-  }
+    }
   ];
 };
 
