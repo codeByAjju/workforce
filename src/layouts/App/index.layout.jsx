@@ -30,7 +30,7 @@ function AppLayout({ setRedirectPath, children }) {
     const isPrivate = activeRoute?.private;
     const isValid = AuthDrive(activeRoute, userData, location.pathname);
     function checkValid() {
-        if (!isValid) {
+        if (isValid) {
             let publicPath = "/";
             let privatePath = "";
             let path = "";
@@ -63,8 +63,8 @@ function AppLayout({ setRedirectPath, children }) {
                     timer: 2000,
                     showConfirmButton: false
                 })
-                privatePath = `${baseRoutes.userBaseRoute}dashboard`;
-                publicPath = `${baseRoutes.userBaseRoute}login`;
+                privatePath = `${baseRoutes.userBaseRoutes}dashboard`;
+                publicPath = `${baseRoutes.userBaseRoutes}login`;
             }
             else {
 

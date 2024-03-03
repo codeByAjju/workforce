@@ -6,7 +6,6 @@ export const APIrequest = async ({
     bodyData,
 }) => {
     try {
-        console.log(bodyData);
         const axiosConfig = {
             method: method || "GET",
             baseURL: "http://localhost:3030/",

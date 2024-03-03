@@ -7,7 +7,7 @@ export default function route() {
       name: "Message",
       key: routesMap.MESSAGE.path,
       commonRoute: true,
-      private: false,
+      private: true,
       withAuth: true,
       belongsToHeader: true,
       element: <UserMessage/>,

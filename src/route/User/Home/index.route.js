@@ -8,7 +8,7 @@ export default function route() {
       name: "Home",
       key: routesMap.HOME.path,
       commonRoute: true,
-      private: false,
+      private: true,
       withAuth: true,
       belongsToHeader: true,
       element: <Home />,

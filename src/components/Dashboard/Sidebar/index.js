@@ -8,7 +8,7 @@ import {
   FaCaretDown,
   FaCaretRight,
 } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Sidebar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +16,7 @@ const Sidebar = ({ children }) => {
   const [toggelWork, setToggelWork] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
+  const location = useLocation();
   const handleToggleWork = () => {
     setToggelWork((prevToggleWork) => !prevToggleWork);
   };
@@ -23,8 +24,7 @@ const Sidebar = ({ children }) => {
   const handleToggleHR = () => {
     setToggleHR((prevToggleHR) => !prevToggleHR);
   };
-
-  return (
+  return <> 
     <div className="" style={{ display: "flex" }}>
       <div
         style={{ position: "fixed", width: isOpen ? "200px" : "50px" }}
@@ -104,7 +104,7 @@ const Sidebar = ({ children }) => {
                 Holiday
               </NavLink>
               <NavLink
-                to="/punch-In-report"
+                to="/punch-in-report"
                 className="link"
                 activeClassName="active"
               >
@@ -182,7 +182,7 @@ const Sidebar = ({ children }) => {
         {children}
       </main>
     </div>
-  );
+  </>
 };
 
 export default Sidebar;

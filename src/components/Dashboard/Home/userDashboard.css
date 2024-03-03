@@ -40,3 +40,6 @@
   font-size: 28px;
   color: #e4a11b;
 }
+.cursor-pointer{
+  cursor: pointer;
+}

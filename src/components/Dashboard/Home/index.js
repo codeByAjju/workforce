@@ -1,6 +1,41 @@
 import React from "react";
 import "./userDashboard.css";
+import { useDispatch, useSelector } from "react-redux";
+import { RemoveLocalStorageToken } from "../../../utils/common.util";
+import { removeDataFromRedux } from "../../../redux/AuthSlice/index";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 function UserDashboard() {
+  const userData = useSelector((state) => state.auth.userData);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const fullName = userData ? `${userData.firstname} ${userData.lastname}` : "";
+  console.log("it is user data : ", userData);
+  const handleLogout = () => {
+    Swal.fire({
+      title: "want to logout ?",
+      icon: "question",
+      iconColor: "#3b71ca",
+      showCancelButton: true,
+      confirmButtonText: "Yes",
+      cancelButtonText: "No",
+      confirmButtonColor: "red",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        dispatch(removeDataFromRedux(""));
+        RemoveLocalStorageToken();
+        navigate("/login");
+      } else if (result.isDismissed) {
+        Swal.fire({
+          text: "YOU ARE STILL LOGGED IN",
+          icon: "warning",
+          iconColor: "#3b71ca",
+          timer: 1500,
+          showConfirmButton: false,
+        });
+      }
+    });
+  };
   return (
     <>
       <div className="row">
@@ -20,14 +55,14 @@ function UserDashboard() {
             <span className="mx-2">
               <i className="fa fa-bell" aria-hidden="true"></i>
             </span>
-            <span className="mx-2">
+            <span className="mx-2 cursor-pointer" onClick={handleLogout}>
               <i className="fa fa-power-off" aria-hidden="true"></i>
             </span>
           </div>
         </div>
         <div className="col-lg-12 d-flex mt-4 bg-light">
           <div className="col-lg-4">
-            <span className="h5">Welcome Ajay Patel</span>
+            <span className="h5">Welcome {fullName}</span>
           </div>
           <div className="col-lg-6 d-flex justify-content-end">
             <div

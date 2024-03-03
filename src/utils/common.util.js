@@ -18,3 +18,9 @@ export const GetLocalStorageToken = () => {
   }
   return false;
 };
+
+
+export const RemoveLocalStorageToken = () => {
+  localStorage.removeItem(`${config.NAME_KEY}:token`);
+  localStorage.removeItem(`${config.APP_PERSIST}:root`);
+}

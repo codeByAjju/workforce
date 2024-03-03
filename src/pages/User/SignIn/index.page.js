@@ -6,6 +6,7 @@ import { useState } from "react";
 import { setLocalStorageToken } from "../../../utils/common.util";
 import { loginAction } from "../../../redux/AuthSlice/index";
 import { useDispatch } from "react-redux";
+import { modalNotification } from "../../../utils";
 
 function UserLogIn() {
   const [isAlertVisible, setIsAlertVisible] = useState(false);
@@ -13,13 +14,14 @@ function UserLogIn() {
   const dispatch = useDispatch();
 
   async function OnSubmit(values) {
-    console.log("it is values", values);
     const res = await UserAuthServices.userLogIn(values);
-    console.log(res);
     if (res) {
       setLocalStorageToken(res?.data?.data?.User?.token);
       dispatch(loginAction(res?.data?.data?.User));
       setIsAlertVisible(true);
+      setTimeout(() => {
+        navigate('/')
+      }, 1500);
     } else window.alert("Unauthorized User");
   }
   return (
